@@ -16,7 +16,7 @@ public class Product {
     String naam;
     double prijs;
     String omschrijving;
-    Image afbeelding;
+    String afbeelding;
     int voorraad;
     int categorieID;
 
@@ -24,7 +24,7 @@ public class Product {
 
     }
 
-    public Product(int productID, String naam, double prijs, String omschrijving, Image afbeelding, int voorraad, int categorieID) {
+    public Product(int productID, String naam, double prijs, String omschrijving, String afbeelding, int voorraad, int categorieID) {
         this.productID = productID;
         this.naam = naam;
         this.prijs = prijs;
@@ -66,11 +66,11 @@ public class Product {
         this.omschrijving = omschrijving;
     }
 
-    public Image getAfbeelding() {
+    public String getAfbeelding() {
         return afbeelding;
     }
 
-    public void setAfbeelding(Image afbeelding) {
+    public void setAfbeelding(String afbeelding) {
         this.afbeelding = afbeelding;
     }
 
