@@ -1,0 +1,4 @@
+model\Product.class
+model\Image.class
+Carre\DAO\BaseDaoImpl.class
+Carre\DAO\BaseDao.class
