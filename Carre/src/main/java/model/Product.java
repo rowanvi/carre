@@ -1,5 +1,6 @@
 package model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,12 +13,19 @@ import javax.persistence.Id;
 public class Product {
     @Id
     @GeneratedValue
+    @Column(name = "PRODUCT_ID")
     int productID;
+    @Column(name = "NAAM")
     String naam;
+    @Column(name = "PRIJS")
     double prijs;
+    @Column(name = "OMSCHRIJVING")
     String omschrijving;
+    @Column(name = "AFBEELDING")
     String afbeelding;
+    @Column(name = "VOORRAAD")
     int voorraad;
+    @Column(name = "CATEGORIE_ID")
     int categorieID;
 
     public Product() {
@@ -88,6 +96,11 @@ public class Product {
 
     public void setCategorieID(int categorieID) {
         this.categorieID = categorieID;
+    }
+
+    @Override
+    public String toString() {
+        return productID + naam + prijs + omschrijving + afbeelding + voorraad + categorieID;
     }
 
 }
