@@ -912,7 +912,7 @@ img.secondary-img {
 .single-product:hover .btn-wish-list{left:0px;}
 
 .single-product:hover .product-action{bottom:0;opacity:1;left:0px;}
-.single-product:hover .pro-button-top {top: -100px;;opacity:1}
+.single-product:hover .pro-button-top {opacity:1}
 .pro-button-top {
   display: inline-block;
   opacity: 0;
@@ -937,6 +937,7 @@ img.secondary-img {
     display: inline-block;    
     position: relative;    
     transition: all 0.5s ease 0s;
+	color: #e311
 }
 .pro-button-bottom a ,.button a {
   background: #222 none repeat scroll 0 0;
@@ -1098,7 +1099,7 @@ a.btn-icon {
   border-radius: 0;
   border: 0;
 }
-a.btn-icon:hover{background:#01c583;color:#fff!important}
+a.btn-icon:hover{background:red;color:#fff!important}
 /*-----------------------------------
 7. category-area 
 ------------------------------------- */
