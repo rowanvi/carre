@@ -22,8 +22,9 @@ public class welcomeController {
         public String hello(Model model) {
 
 		model.addAttribute("message", "Welcome to Spring");
+                model.addAttribute("test", "Welcome test");
 
-		return "welcome";
+		return "index";
 	}
     
 }

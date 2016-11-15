@@ -1,4 +1,12 @@
-model\Product.class
-model\Image.class
 Carre\DAO\BaseDaoImpl.class
+model\Rollen.class
+model\Order.class
+controller\index.class
+model\Gebruiker.class
+model\Product.class
+model\Catalogus.class
+config\appConfig.class
+controller\welcomeController.class
+config\appInit.class
+model\Categorie.class
 Carre\DAO\BaseDao.class

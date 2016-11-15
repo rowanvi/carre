@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-<!-- Mirrored from urwebsites.com/urwebsites/onlineshop/online-shop/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Sep 2016 08:57:46 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="#">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <!-- google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300' rel='stylesheet'
         type='text/css'>
@@ -63,8 +62,7 @@
                         </ul>
                         <ul>
                             <li><a href="#">Account</a></li>
-                            <li><a href="#">Winkelwagen</a></li>
-                            <li><a href="#">Checkout</a></li>
+                            <li><a href="cart.html">Winkelwagen</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +98,7 @@
                                     <ul>
 									    <li>
 										    <div class="cart-img">
-											    <a href="#"><img src="" alt="" /></a>											    
+											    <a href="#"><img src="img/cart/total-cart.jpg" alt="" /></a>											    
 										    </div>
 										    <div class="cart-info">
 											    <h4><a href="#">Cola</a></h4>
@@ -115,7 +113,7 @@
 										    <div class="subtotal-price">&euro; 300.00</div>
 									    </li>
                                          <li>
-										    <a href="#" class="button float-right">Checkout</a>										    
+										    <a href="cart.html" class="button float-right">Checkout</a>										    
 									    </li>
 								    </ul>                   
                                 </div>
@@ -406,11 +404,11 @@
 						<!-- footer-widget start -->
 						<div class="col-lg-3 col-md-3 col-sm-4">
 							<div class="footer-widget">
-                            <div class="footer-logo"><a href="#"><span>Logo</span> </a></div>								
+                            <div class="footer-logo"><img src="img/logo.png"/></div>								
 								<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. .</p>
 								<address class="box-address">
-										<span class="fa fa-home"></span>Adres<br>
-										<span class="fa fa-phone"></span> <b class="color-dark">Nummer </b><br>										
+										<span class="fa fa-home"></span>Adres Amstel 115-125,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1018 EM Amsterdam<br>
+										<span class="fa fa-phone"></span> <b class="color-dark">Nummer 020 52 49 494</b><br>										
 										<span class="fa fa-envelope"></span> <a class="color" href="mailto:admin@yourdomain.com">Email</a>
 								</address>                                
 							</div>
@@ -504,5 +502,28 @@
     <script src="js/main.js"></script>
     <!-- Cookie js -->
     <script src="js/jquery.cookie.js"></script>
+	<!-- Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"></script>
+    <script>
+        function initialize() {
+            var mapOptions = {
+                zoom: 15,
+                scrollwheel: false,
+                center: new google.maps.LatLng(52.3623872, 4.9042637)
+            };
+
+            var map = new google.maps.Map(document.getElementById('googleMap'),
+				  mapOptions);
+
+
+            var marker = new google.maps.Marker({
+                position: map.getCenter(),
+                map: map
+            });
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </body>
 </html>
