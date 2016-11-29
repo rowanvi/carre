@@ -22,19 +22,19 @@ import Carre.DAO.GebruikerDao;
 public class welcomeController {
     
     @Autowired
-    Gebruiker baseDao;
+    GebruikerDao Gebruiker;
     
     @RequestMapping("/")
 	
         public ModelAndView hello() {
 
-            baseDao.persist(new Gebruiker());
+            Gebruiker.persist(new Gebruiker());
 		//model.addAttribute("message", "Welcome to Spring");
                 //model.addAttribute("test", "Welcome test");
 
             ModelAndView model = new ModelAndView("index");
             
-            model.addObject("user", baseDao.getALL());
+            model.addObject("user", Gebruiker.getALL());
             return model;
 
 	}
